@@ -1,7 +1,7 @@
 
 // Fetch API
 
-// aqui tienes que crear una variable con el key de la api y ponerla al final de la variable peticion debajo de esto-
+// aqui tienes que crear una variable con el key de la api y ponerla al final de la variable peticion debajo de esto
 
 const peticion = fetch(`http://api.giphy.com/v1/gifs/random?api_key=${tukeyaqui}`);
 
