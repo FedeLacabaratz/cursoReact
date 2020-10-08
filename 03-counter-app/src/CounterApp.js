@@ -39,7 +39,7 @@ CounterApp.propTyper = {
 }
 
 CounterApp.defaultProps = {
-    value: 125,
+    value: 10,
 }
 
 export default CounterApp;
