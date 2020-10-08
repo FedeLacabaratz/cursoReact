@@ -13,7 +13,6 @@ describe('Pruebas en 02-template-string.js', () => {
 
     });
 
-    // getSaludo debe de retornar "Hola Carlos!" si no hay argumento en el nombre
     test('getSaludo debe de retornar "Hola Carlos!" si no hay argumentos en el nombre', () => {
         
         const saludo = getSaludo();
