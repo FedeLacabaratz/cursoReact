@@ -4,7 +4,7 @@ const apiKey = process.env.REACT_APP_GIF_API_KEY;
 
 const getGifs = async (category) => {
     try {
-        const url = `https://api.giphy.com/v1/gifs/search?q=${encodeURI(category)}&limit=10&api_key=${apiKey}`;
+        const url = `https://api.giphy.com/v1/gifs/search?q=${encodeURI(category)}&limit=12&api_key=${apiKey}`;
         const resp = await fetch(url);
         const { data } = await resp.json();
 
