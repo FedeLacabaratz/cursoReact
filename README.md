@@ -34,4 +34,4 @@ React course to learn about:
 
 ## LINKS TO THE PROJECTS (This section will be updated as more projects are being completed)
 
-[Example App](https://www.google.es/) - In here I will be adding a brief description to the project. As the course goes by I will be adding more and more apps.
+[GifExpertApp](https://gifexpertapp.netlify.app/) - Find your faorite GIFs to share with the world!.
