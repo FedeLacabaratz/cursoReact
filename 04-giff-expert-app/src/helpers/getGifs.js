@@ -1,5 +1,3 @@
-
-
 const apiKey = process.env.REACT_APP_GIF_API_KEY;
 
 const getGifs = async (category) => {
