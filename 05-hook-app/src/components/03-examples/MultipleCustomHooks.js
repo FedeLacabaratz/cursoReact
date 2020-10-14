@@ -22,7 +22,6 @@ const MultipleCustomHooks = () => {
         } 
         
         if (counter >= 102) {
-            console.log('entro')
             return reset();
         }
     }
