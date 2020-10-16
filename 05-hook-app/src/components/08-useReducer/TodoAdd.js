@@ -43,7 +43,7 @@ const TodoAdd = ({ handleAddTodo }) => {
                 />
                 <button
                     type="submit"
-                    className="btn btn-outline-primary mt-1 btn-block"
+                    className="btn btn-outline-primary mt-3 btn-block"
                 >
                     Agregar
                         </button>
