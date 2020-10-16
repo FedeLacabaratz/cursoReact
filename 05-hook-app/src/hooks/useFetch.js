@@ -1,8 +1,15 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
 const useFetch = (url) => {
 
-    const [state, setState] = useState({ data: null, loading: true, error: null })
+    const isMounted = useRef(true);
+    const [state, setState] = useState({ data: null, loading: true, error: null });
+
+    useEffect(() => {
+        return () => {
+            isMounted.current = false;
+        }
+    }, [])
 
     useEffect(() => {
 
@@ -12,18 +19,21 @@ const useFetch = (url) => {
             error: null,
         });
 
-        const fetchData = async() => {
+        const fetchData = async () => {
             const resp = await fetch(url);
             const data = await resp.json();
-            setState({
-                data: data,
-                loading: false,
-                error: null,
+
+            if (isMounted.current) {
+                setState({
+                    data: data, // Acorde a ES6 tambien puede ser solo escribit "data" la igualación esta demás, solo la deje por fines ilustrativos
+                    loading: false,
+                    error: null,
                 });
+            }
         }
         fetchData();
 
-}, [url])
+    }, [url])
 
     return state;
 }
