@@ -34,11 +34,11 @@ describe('Pruebas en useFetch', () => {
         await  waitForNextUpdate();
 
         const { data, loading, error } = result.current;
+
         expect(data).toBe(null);
         expect(loading).toBe(false);
-        expect(error).toBe(error.message);
+        expect(error).toBe(error);
 
     });
-
 
 });

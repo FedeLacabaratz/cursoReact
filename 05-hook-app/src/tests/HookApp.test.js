@@ -10,7 +10,7 @@ describe('pruebas en <HookApp />', () => {
     beforeAll(() => {
         jest.clearAllMocks();
         wrapper = shallow(<HookApp />);
-    })
+    });
 
     test('It should print the component correctly', () => {
         
