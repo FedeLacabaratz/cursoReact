@@ -13,6 +13,7 @@ const useForm = (initialState = {}) => {
         setValues({
             ...values,
             [ target.name ]: target.value,
+            // [ target.email ]: target.value1,
         })
     };
 
