@@ -9,7 +9,7 @@ export const LoginScreen = ({ history }) => {
 
     const handleLogin = () => {
         //history.push('/'); redirecciona a la ruta donde necesite ir
-        const lastPath = localStorage.getItem('lastPath') || '/'
+        const lastPath = localStorage.getItem('lastPath') || '/';
 
         dispatch({
             type: types.login,

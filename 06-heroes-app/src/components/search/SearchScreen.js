@@ -60,7 +60,7 @@ export const SearchScreen = ({ history }) => {
                     }
                     {
                         (q !== '' && heroesFiltered.length === 0) && <div className="alert alert-danger">
-                            There's no hero that matches with your search for '${q}'  
+                            There's no hero that matches with your search for '{q}'  
                         </div>
                     }
                     {
