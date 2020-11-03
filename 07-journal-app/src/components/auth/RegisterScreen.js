@@ -10,12 +10,7 @@ export const RegisterScreen = () => {
 
     const dispatch = useDispatch();
 
-    const [formValues, handleInputChange] = useForm({
-        name: 'Fernandico',
-        email: 'nandico@gmail.com',
-        password: '123456',
-        password2: '123456'
-    });
+    const [formValues, handleInputChange] = useForm({});
 
     const { name, email, password, password2 } = formValues;
 
@@ -47,7 +42,10 @@ export const RegisterScreen = () => {
         <>
             <h3 className="auth__title">Register</h3>
 
-            <form onSubmit={handleRegister}>
+            <form 
+                onSubmit={handleRegister}
+                className="animate__animated animate__fadeIn animate__faster"
+            >
                 <input
                     type="text"
                     placeholder="email"

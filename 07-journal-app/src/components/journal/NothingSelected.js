@@ -2,7 +2,7 @@ import React from 'react';
 
 export const NothingSelected = () => {
     return (
-        <main className="nothing__main-content">
+        <main className="nothing__main-content animate__animated animate__slideInDown">
             <p>
                 Select Something
                 <br />
