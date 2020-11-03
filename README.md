@@ -37,3 +37,5 @@ React course to learn about:
 [GifExpertApp](https://gifexpertapp.netlify.app/) - Find your favorite GIFs to share with the world!.
 
 [HeroesApp](https://heroesapp.netlify.app/login) - Find your favorite Marvek/DC Heroes and some information about them!.
+
+[JournalApp](https://myjournal-app.netlify.app/) - Create, your own notes inside your private and free journal!.
