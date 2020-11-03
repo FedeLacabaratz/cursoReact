@@ -13,21 +13,24 @@ import { PublicRoute } from '../routers/PublicRoute';
 
 import { JournalScreen } from '../components/journal/JournalScreen';
 import { login } from '../actions/auth';
+import { startLoadingNotes } from '../actions/notes';
 
 export const AppRouter = () => {
-    
+
     const dispatch = useDispatch();
 
     const [checking, setChecking] = useState(true);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
 
     useEffect(() => {
-        
-        firebase.auth().onAuthStateChanged( (user) => {
 
-            if(user?.uid) {
-                dispatch( login(user.uid, user.displayName) )
+        firebase.auth().onAuthStateChanged((user) => {
+
+            if (user?.uid) {
+                dispatch(login(user.uid, user.displayName))
                 setIsLoggedIn(true);
+
+                dispatch(startLoadingNotes(user.uid))
             } else {
                 setIsLoggedIn(false);
             }
@@ -37,26 +40,26 @@ export const AppRouter = () => {
 
     }, [dispatch, setChecking, setIsLoggedIn]);
 
-    if(checking) {
+    if (checking) {
         return (
-            <h1>Espere...</h1>
+            <h1>Please Wait...</h1>
         )
     };
 
     return (
         <Router>
             <Switch>
-                <PublicRoute 
-                    path="/auth" 
+                <PublicRoute
+                    path="/auth"
                     isAuthenticated={isLoggedIn}
-                    component={AuthRouter} 
+                    component={AuthRouter}
                 />
 
-                <PrivateRoute 
+                <PrivateRoute
                     exact
-                    isAuthenticated={isLoggedIn} 
-                    path="/" 
-                    component={JournalScreen} 
+                    isAuthenticated={isLoggedIn}
+                    path="/"
+                    component={JournalScreen}
                 />
 
                 <Redirect to="/auth/login" />
