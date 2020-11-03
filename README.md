@@ -35,4 +35,5 @@ React course to learn about:
 ## LINKS TO THE PROJECTS (This section will be updated as more projects are being completed)
 
 [GifExpertApp](https://gifexpertapp.netlify.app/) - Find your favorite GIFs to share with the world!.
+
 [HeroesApp](https://heroesapp.netlify.app/login) - Find your favorite Marvek/DC Heroes and some information about them!.
